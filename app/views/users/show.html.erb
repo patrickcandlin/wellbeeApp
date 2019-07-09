@@ -1,16 +1,29 @@
-<p id="notice"><%= notice %></p>
 
+<p id="notice"><%= notice %></p>
 <h1 style="color:rgb(145, 2, 55);">
   Welcome, <%= @user.first_name %>!
 </h1>
 
+<style>
+body {
+  background-color: #EED79B;
+}
+</style>
+
+<div class= "menu">
+<ul>
+<li><%= link_to 'ToDo', new_user_todo_list_path(@user) %></li>
+<li><%= link_to 'Gratitude', new_user_gratitude_journal_path(@user) %></li>
+<li style="float:right"><%= link_to 'Edit', edit_user_path(@user) %></li>
+<li style="float:right"><%= link_to 'Back', users_path %></li>
+</ul>
+
+</div>
 
 
-<%= link_to 'ToDo List', new_todo_list_path %>
-
-<br>
-<%= link_to 'Gratitude Journal', new_gratitude_journal_path %>
-<br>
-<%= link_to 'Edit', edit_user_path(@user) %> 
-<br>
-<%= link_to 'Back', users_path %>
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="https://img4.goodfon.com/wallpaper/nbig/5/1f/zakat-oduvanchik-priroda.jpg" width="600" height="400">
+  </a>
+  </div>
+ 

@@ -1,0 +1,31 @@
+ @import "bootstrap";
+
+ .menu { 
+   
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #d8a04c;
+     }
+
+    li {
+        font-size: 150%;
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        float: left;
+}
+ }
+
+ .gallery {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    position:absolute;
+    top:25%;
+    left:25%;
+  }
