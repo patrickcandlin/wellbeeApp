@@ -3,8 +3,16 @@
 <h1 style="color:rgb(145, 2, 55);">
   Welcome, <%= @user.first_name %>!
 </h1>
+<% @user.todo_lists.each do |todo_list| %>
+<div class="card">
+  <div class="container">
+    <h4><b><%= todo_list.task_name %></b></h4> 
+    <p><%= todo_list.due_date %></p> 
+  </div>
+</div>
 
-
+<%= todo_list.task_name %>
+<% end %>
 
 <br>
 
@@ -12,4 +20,5 @@
 <%= link_to 'Update Account', edit_user_path(@user) %> 
 <br>
 <%= link_to 'Back', users_path %>
-<%= link_to 'add a todo', new_user_todo_list_path(@user)%>
+<%= link_to 'Create a Task', new_user_todo_list_path(@user)%>
+<%= link_to 'Express Gratitude', new_user_gratitude_journal_path(@user)%>
