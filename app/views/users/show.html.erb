@@ -18,6 +18,11 @@
 
   <%end%>
 </ul>
+<ul class="flex-container">
+<% @user.gratitude_journals.each do |gratitude_journal| %>
+<li class="flex-item"><%= gratitude_journal.title %></li>
+<%end%>
+</ul>
 
 <style>
 body {
