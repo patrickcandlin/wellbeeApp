@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :todo_lists
+  resources :gratitude_journals
   resources :users do
     resources :todo_lists
     resources :gratitude_journals

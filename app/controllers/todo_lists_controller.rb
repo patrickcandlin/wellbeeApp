@@ -14,7 +14,8 @@ class TodoListsController < ApplicationController
 
   # GET /todo_lists/new
   def new
-    @todo_list = TodoList.new
+    set_user
+    @todo_list = @user.todo_lists.build
   end
 
   # GET /todo_lists/1/edit
@@ -28,7 +29,7 @@ class TodoListsController < ApplicationController
 
     respond_to do |format|
       if @todo_list.save
-        format.html { redirect_to @todo_list, notice: 'Todo list was successfully created.' }
+        format.html { redirect_to user_path(params[:todo_list][:user_id]), notice: 'Todo list was successfully created.' }
         format.json { render :show, status: :created, location: @todo_list }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class TodoListsController < ApplicationController
   def update
     respond_to do |format|
       if @todo_list.update(todo_list_params)
-        format.html { redirect_to @todo_list, notice: 'Todo list was successfully updated.' }
+        format.html { redirect_to user_path(params[:todo_list][:user_id]), notice: 'Todo list was successfully updated.' }
         format.json { render :show, status: :ok, location: @todo_list }
       else
         format.html { render :edit }
@@ -65,6 +66,10 @@ class TodoListsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_todo_list
       @todo_list = TodoList.find(params[:id])
+    end
+    
+    def set_user
+      @user = User.find(params[:user_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
