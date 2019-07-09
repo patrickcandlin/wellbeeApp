@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   # GET /users/new
-  def news
+  def new
     @user = User.new
   end
 
