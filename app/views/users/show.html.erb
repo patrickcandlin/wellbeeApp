@@ -1,36 +1,29 @@
+<h1>WellBee 🐝</h1>
 
 <p id="notice"><%= notice %></p>
-<h1 style="color:rgb(145, 2, 55);">
+<h2 style="color: #EED79B;">
   Welcome, <%= @user.first_name %>!
-</h1>
-<% @user.todo_lists.each do |todo_list| %>
-<div class="card">
-  <div class="container">
-    <h4><b><%= todo_list.task_name %></b></h4> 
-    <p><%= todo_list.due_date %></p> 
-  </div>
-  </div>
-  <%end%>
+</h2>
 
 
-<style>
-body {
-  background-color: #EED79B;
-}
-</style>
+  
 
 <div class= "menu">
 <ul>
 <li><%= link_to 'Create a Task', new_user_todo_list_path(@user) %></li>
 <li><%= link_to 'Express Gratitude', new_user_gratitude_journal_path(@user) %></li>
-<li style="float:right"><%= link_to 'Edit', edit_user_path(@user) %></li>
-<li style="float:right"><%= link_to 'Back', users_path %></li>
+<li><%= link_to 'Edit', edit_user_path(@user) %></li>
+<li><%= link_to 'Back', users_path %></li>
 </ul>
 
 </div>
 
-
-<div class="gallery">
-  <img src="https://img4.goodfon.com/wallpaper/nbig/5/1f/zakat-oduvanchik-priroda.jpg" width="600" height="400">
+<% @user.todo_lists.each do |todo_list| %>
+  <div class="card">
+    <div class="container">
+      <p style="float:left"><b><%= todo_list.task_name %></b></p> 
+      <p style="float:left"><%= todo_list.due_date %></p> 
+    </div>
   </div>
- 
+ <%end%>
+
