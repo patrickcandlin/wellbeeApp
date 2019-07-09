@@ -1,11 +1,39 @@
 <h1>WellBee 🐝</h1>
 
 <p id="notice"><%= notice %></p>
+<<<<<<< HEAD
+<h1 style="color:rgb(145, 2, 55);">
+  Welcome, <%= @user.first_name.capitalize %>!
+</h1>
+<ul class="navigation">
+  <li><%= link_to 'Create a Task', new_user_todo_list_path(@user) %></li>
+  <li><%= link_to 'Express Gratitude', new_user_gratitude_journal_path(@user) %></li>
+  <li><%= link_to 'Edit', edit_user_path(@user) %></li>
+  <li><%= link_to 'Back', users_path %></li>
+</ul>
+
+<ul class="flex-container">
+<% @user.todo_lists.each do |todo_list| %>
+=======
 <h2 style="color: #EED79B;">
   Welcome, <%= @user.first_name %>!
 </h2>
+>>>>>>> master
 
+  <li class="flex-item"><%= todo_list.task_name %></li>
 
+  <%end%>
+</ul>
+
+<<<<<<< HEAD
+<style>
+body {
+  background-color: #EED79B;
+  background-image: url("https://img4.goodfon.com/wallpaper/nbig/5/1f/zakat-oduvanchik-priroda.jpg")
+}
+</style>
+
+=======
   
 
 <div class= "menu">
@@ -15,6 +43,7 @@
 <li><%= link_to 'Edit', edit_user_path(@user) %></li>
 <li><%= link_to 'Back', users_path %></li>
 </ul>
+>>>>>>> master
 
 </div>
 
