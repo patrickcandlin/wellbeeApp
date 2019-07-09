@@ -1,25 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+<h1 style="color:rgb(145, 2, 55);">
+  Welcome, <%= @user.first_name %>!
+</h1>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
 
-<p>
-  <strong>Birthdate:</strong>
-  <%= @user.birthdate %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<%= link_to 'ToDo List', new_todo_list_path %>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<br>
+<%= link_to 'Gratitude Journal', new_gratitude_journal_path %>
+<br>
+<%= link_to 'Edit', edit_user_path(@user) %> 
+<br>
 <%= link_to 'Back', users_path %>
-<%= link_to 'New Todo', new_todo_list_path %>
