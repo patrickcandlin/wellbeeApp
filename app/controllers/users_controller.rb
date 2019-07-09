@@ -11,10 +11,11 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @todo = TodoList.new
+    
   end
 
   # GET /users/new
-  def new
+  def news
     @user = User.new
   end
 
