@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2019_07_08_165819) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "gratitude_journals", force: :cascade do |t|
     t.string "title"
     t.string "content"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_gratitude_journals_on_user_id"
@@ -25,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_07_08_165819) do
     t.string "task_name"
     t.string "task_content"
     t.date "due_date"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_todo_lists_on_user_id"
@@ -40,4 +43,6 @@ ActiveRecord::Schema.define(version: 2019_07_08_165819) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "gratitude_journals", "users"
+  add_foreign_key "todo_lists", "users"
 end
