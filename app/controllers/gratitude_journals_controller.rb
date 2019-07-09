@@ -29,7 +29,7 @@ class GratitudeJournalsController < ApplicationController
 
     respond_to do |format|
       if @gratitude_journal.save
-        format.html { redirect_to @gratitude_journal, notice: 'Gratitude journal was successfully created.' }
+        format.html { redirect_to user_path(params[:gratitude_journal][:user_id]), notice: 'Gratitude journal was successfully created.' }
         format.json { render :show, status: :created, location: @gratitude_journal }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class GratitudeJournalsController < ApplicationController
   def update
     respond_to do |format|
       if @gratitude_journal.update(gratitude_journal_params)
-        format.html { redirect_to @gratitude_journal, notice: 'Gratitude journal was successfully updated.' }
+        format.html { redirect_to user_path(params[:gratitude_journal][:user_id]), notice: 'Gratitude journal was successfully updated.' }
         format.json { render :show, status: :ok, location: @gratitude_journal }
       else
         format.html { render :edit }
