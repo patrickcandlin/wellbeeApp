@@ -14,7 +14,8 @@ class GratitudeJournalsController < ApplicationController
 
   # GET /gratitude_journals/new
   def new
-    @gratitude_journal = GratitudeJournal.new
+    set_user
+    @gratitude_journal = @user.gratitude_journals.build
   end
 
   # GET /gratitude_journals/1/edit
@@ -65,6 +66,10 @@ class GratitudeJournalsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_gratitude_journal
       @gratitude_journal = GratitudeJournal.find(params[:id])
+    end
+
+    def set_user
+      @user = User.find(params[:user_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
