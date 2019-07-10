@@ -10,6 +10,7 @@ class TodoListsController < ApplicationController
   # GET /todo_lists/1
   # GET /todo_lists/1.json
   def show
+    # byebug
   end
 
   # GET /todo_lists/new
@@ -32,7 +33,7 @@ class TodoListsController < ApplicationController
         format.html { redirect_to user_path(params[:todo_list][:user_id]), notice: 'Todo list was successfully created.' }
         format.json { render :show, status: :created, location: @todo_list }
       else
-        format.html { render :new }
+        format.html { redirect_to new_user_todo_list_path(params[:todo_list][:user_id])}
         format.json { render json: @todo_list.errors, status: :unprocessable_entity }
       end
     end

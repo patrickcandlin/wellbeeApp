@@ -11,27 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :task_name %>
-    <%= form.text_field :task_name %>
-  </div>
 
-  <div class="field">
-    <%= form.label :task_content %>
-    <%= form.text_area :task_content %>
-  </div>
+      <div class="field">
+        <%= form.label :task_name, "Task:"%>
+        <%= form.text_field :task_name %>
+      </div>
 
-  <div class="field">
-    <%= form.label :due_date %>
-    <%= form.date_select :due_date %>
-  </div>
+      <div class="field">
+        <%= form.label :task_content, "Description:" %>
+        <%= form.text_area :task_content %>
+      </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
+      <div class="field">
+        <%= form.label :due_date %>
+        <%= form.date_select :due_date %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+      <div class="field">
+        <%= form.label :user_id %>
+        <%= form.text_field :user_id %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit(class: "button", value:"Create Task") %>
+      </div>
+    <% end %>
