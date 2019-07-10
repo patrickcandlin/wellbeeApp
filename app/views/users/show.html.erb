@@ -1,9 +1,9 @@
 <h1>WellBee 🐝</h1>
 
 <p id="notice"><%= notice %></p>
-<h2 style="color: #EED79B;">
+<h2>
     Welcome, <%= @user.first_name.capitalize %>!
-</h1>
+</h2>
 <ul class="navigation">
   <li><%= link_to 'Create a Task', new_user_todo_list_path(@user) %></li>
   <li><%= link_to 'Express Gratitude', new_user_gratitude_journal_path(@user) %></li>
@@ -14,7 +14,7 @@
 <ul class="flex-container">
   <% @user.todo_lists.each do |todo_list| %>
 
-  <li class="flex-item"><%= todo_list.task_name %></li>
+  <li class="flex-item"><%=link_to todo_list.task_name, user_todo_list_path(todo_list)%></li>
 
   <%end%>
 </ul>
@@ -24,12 +24,12 @@
 <%end%>
 </ul>
 
-<style>
+<%# <style>
 body {
   background-color: #EED79B;
   background-image: url("https://img4.goodfon.com/wallpaper/nbig/5/1f/zakat-oduvanchik-priroda.jpg")
 }
-</style>
+</style> %>
 
 
 
