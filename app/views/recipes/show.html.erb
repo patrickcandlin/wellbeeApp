@@ -1,0 +1,20 @@
+<h1>WellBee 🐝</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recipe title:</strong>
+  <%= @recipe.recipe_title %>
+</p>
+
+<p>
+  <strong>Recipe content:</strong>
+  <%= @recipe.recipe_content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @recipe.user %>
+</p>
+
+<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
+<%= link_to 'Back', recipes_path %>

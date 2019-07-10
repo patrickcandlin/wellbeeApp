@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :quotes
+  resources :exercises
+  resources :recipes
   resources :todo_lists
   resources :gratitude_journals
   resources :users do
