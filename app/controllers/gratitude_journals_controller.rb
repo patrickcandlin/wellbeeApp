@@ -32,7 +32,7 @@ class GratitudeJournalsController < ApplicationController
         format.html { redirect_to user_path(params[:gratitude_journal][:user_id]), notice: 'Gratitude journal was successfully created.' }
         format.json { render :show, status: :created, location: @gratitude_journal }
       else
-        format.html { render :new }
+        format.html { redirect_to new_user_gratitude_journal_path(params[:gratitude_journal][:user_id]) }
         format.json { render json: @gratitude_journal.errors, status: :unprocessable_entity }
       end
     end
