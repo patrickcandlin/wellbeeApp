@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_08_165819) do
+ActiveRecord::Schema.define(version: 2019_07_10_155703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "exercises", force: :cascade do |t|
+    t.string "exercise_title"
+    t.string "exercise_content"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_exercises_on_user_id"
+  end
 
   create_table "gratitude_journals", force: :cascade do |t|
     t.string "title"
@@ -22,6 +31,24 @@ ActiveRecord::Schema.define(version: 2019_07_08_165819) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_gratitude_journals_on_user_id"
+  end
+
+  create_table "quotes", force: :cascade do |t|
+    t.string "quote_title"
+    t.string "quote_content"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_quotes_on_user_id"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "recipe_title"
+    t.string "recipe_content"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
   create_table "todo_lists", force: :cascade do |t|
@@ -43,6 +70,9 @@ ActiveRecord::Schema.define(version: 2019_07_08_165819) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "exercises", "users"
   add_foreign_key "gratitude_journals", "users"
+  add_foreign_key "quotes", "users"
+  add_foreign_key "recipes", "users"
   add_foreign_key "todo_lists", "users"
 end
