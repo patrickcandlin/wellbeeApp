@@ -7,12 +7,13 @@ body {
 
    h1 {
       font-family: 'Merienda One', cursive;
-      background-color: #EED79B;
+      margin:  0 35px 0 35px;
    }
 
    h2 {
       font-family: 'Heebo', sans-serif; 
       color: #EED79B; 
+      margin: 0 35px 0 35px;
    }
    form {
       padding: 20px;
@@ -31,9 +32,9 @@ body {
       font-size: 15px;
       color: #fff;
       text-align: center;
-      background: #4d4d4d;
-      border: 0;
-      border-bottom: 2px solid #d0d0d0;
+      background: #e6ac0f;
+      border: 1;
+      border-color: rgb(0, 0, 0);
       cursor: pointer;
       margin-left: auto;
    }
@@ -57,7 +58,7 @@ body {
 
 .navigation {
   list-style: none;
-  margin: 0; 
+  margin: 35px; 
   
   background: bg-transparent;
   
@@ -123,12 +124,12 @@ body {
  }
  
  .flex-item {
-   flex: 0 1 auto;
+  
    background: darken(rgba(255, 204, 37, 0.466), 2%);
    padding: 5px;
    width: 200px;
    height: 150px;
-   margin-top: 0px;
+   margin-top: 10px;
    
    line-height: 1.6;
    color: white;
