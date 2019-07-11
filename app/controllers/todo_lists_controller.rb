@@ -4,7 +4,7 @@ class TodoListsController < ApplicationController
   # GET /todo_lists
   # GET /todo_lists.json
   def index
-    @todo_lists = TodoList.all
+    @todo_lists = TodoList.all.select {|todo| todo.user.id == params[:user_id].to_i}
   end
 
   # GET /todo_lists/1
@@ -56,9 +56,10 @@ class TodoListsController < ApplicationController
   # DELETE /todo_lists/1
   # DELETE /todo_lists/1.json
   def destroy
+    user_id = @todo_list.user_id
     @todo_list.destroy
     respond_to do |format|
-      format.html { redirect_to todo_lists_url, notice: 'Todo list was successfully destroyed.' }
+      format.html { redirect_to user_todo_lists_path(user_id), notice: 'Todo list was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

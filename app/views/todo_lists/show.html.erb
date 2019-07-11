@@ -1,24 +1,25 @@
 <p id="notice"><%= notice %></p>
+<ul class="navigation">
+  <li><%= link_to 'Edit', edit_user_todo_list_path(params[:user_id], params[:id]) %></li>
+  <li><%= link_to 'Back', user_path(params[:user_id]) %></li>
+</ul>
+<ul class="flex-container">
+    <li class="flex-item-todo-show">
+        <p>
+          <strong>Task name:</strong>
+          <%= @todo_list.task_name %>
+        </p>
 
-<p>
-  <strong>Task name:</strong>
-  <%= @todo_list.task_name %>
-</p>
+        <p>
+          <strong>Task content:</strong>
+          <%= @todo_list.task_content %>
+        </p>
 
-<p>
-  <strong>Task content:</strong>
-  <%= @todo_list.task_content %>
-</p>
+        <p>
+          <strong>Due date:</strong>
+          <%= @todo_list.due_date %>
+        </p>
 
-<p>
-  <strong>Due date:</strong>
-  <%= @todo_list.due_date %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @todo_list.user %>
-</p>
-
-<%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-<%= link_to 'Back', user_path(params[:id]) %>
+        <%= button_to 'delete', user_todo_list_url, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+</ul>

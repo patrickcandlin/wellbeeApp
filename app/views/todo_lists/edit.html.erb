@@ -1,7 +1,7 @@
 <h1>WellBee 🐝</h1>
 <h2>Editing Todo List</h2>
 <ul class="navigation">
-  <li><%= link_to 'Back', user_path(@user) %></li>
+  <li><%= link_to 'Back', user_path(params[:user_id]) %></li>
 </ul>
 <%= render 'form', todo_list: @todo_list %>
 

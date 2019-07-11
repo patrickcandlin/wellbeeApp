@@ -2,33 +2,22 @@
 <p id="notice"><%= notice %></p>
 
 <h2>Todo Lists</h2>
+<ul class="navigation">
+  <li><%= link_to 'Create a Task', new_user_todo_list_path(params[:user_id]) %></li>
+  <li><%= link_to 'Express Gratitude', new_user_gratitude_journal_path(params[:user_id]) %></li>
+  <li><%= link_to 'Back', users_path(params[:user_id]) %></li>
+</ul>
 
-<table>
-  <thead>
-    <tr>
-      <th>Task name</th>
-      <th>Task content</th>
-      <th>Due date</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @todo_lists.each do |todo_list| %>
-      <tr>
-        <td><%= todo_list.task_name %></td>
-        <td><%= todo_list.task_content %></td>
-        <td><%= todo_list.due_date %></td>
-        <td><%= todo_list.user %></td>
-        <td><%= link_to 'Show', todo_list %></td>
-        <td><%= link_to 'Edit', edit_todo_list_path(todo_list) %></td>
-        <td><%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+  <ul class="flex-container">
+      <% @todo_lists.each do |todo_list| %>
+      <li class="flex-item-todo">Task: <%=link_to todo_list.task_name, user_todo_list_path(params[:user_id], todo_list)%>
+      Due date: <%= todo_list.due_date %> 
+      <%= link_to 'Show', user_todo_list_path(params[:user_id], todo_list) %></td>
+      <%= link_to 'Edit', edit_user_todo_list_path(params[:user_id], todo_list) %>
+      </li>
+      <%end%>
+</ul>
+  
 <br>
 
-<%= link_to 'New Todo List', new_todo_list_path %>
+
