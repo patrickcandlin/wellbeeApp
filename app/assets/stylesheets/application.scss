@@ -3,6 +3,7 @@
 
 body {
     background-image: url("https://img4.goodfon.com/wallpaper/nbig/5/1f/zakat-oduvanchik-priroda.jpg");
+    // background-image: url("https://stmed.net/sites/default/files/blur-wallpapers-25172-4864287.jpg");
     // background-image: url("https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80");
     // background-image: url("https://image.freepik.com/free-vector/orange-abstract-hexagonal-honey-comb-background_1164-1261.jpg");
     background-repeat: no-repeat;
@@ -14,11 +15,12 @@ body {
    h1 {
       font-family: 'Merienda One', cursive;
       margin:  0 35px 0 35px;
+      color: rgb(252, 255, 71); 
    }
 
    h2 {
       font-family: 'Heebo', sans-serif; 
-      color: #EED79B; 
+      color: rgb(252, 255, 71); 
       margin: 0 35px 0 35px;
    }
    form {
@@ -27,7 +29,7 @@ body {
       box-sizing: border-box;
       margin: 0 auto;
       font-family: 'Heebo', sans-serif;
-      background: darken(rgba(255, 204, 37, 0.466), 2%);
+      background: darken(rgba(255, 230, 0, 0.774), 2%);
    }
    .button {
       position: relative;
@@ -86,7 +88,9 @@ body {
 }
 
 .navigation a:hover {
-  background: darken(rgba(255, 204, 37, 0.466), 2%);
+  background: darken(rgba(255, 230, 0, 0.774), 2%);
+  color: #000;
+  border-radius: 1em;
 }
 
 @media all and (max-width: 800px) {
@@ -129,21 +133,37 @@ body {
    justify-content: space-around;
  }
  a {
-  color: #fff;
+  color: rgb(0, 0, 0);
 
  }
- .flex-item {
+ .flex-item-gratitude {
   
-   background: darken(rgba(255, 204, 37, 0.692), 2%);
+   background: darken(rgba(255, 230, 0, 0.774), 2%);
    padding: 5px;
-   width: 200px;
-   height: 150px;
+   width: 220px;
+   height: 200px;
    margin-top: 10px;
-   
+   overflow: hidden;
    line-height: 1.6;
-   color: white;
+   color: rgb(0, 0, 0);
    font-weight: bold;
    font-size: 1em;
    text-align: left;
+   border-radius: 1em;
  }
   
+ .flex-item-todo {
+  
+  background: darken(rgba(255, 254, 254, 0.801), 2%);
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  
+  line-height: 1.6;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+  border-radius: 1em;
+}
