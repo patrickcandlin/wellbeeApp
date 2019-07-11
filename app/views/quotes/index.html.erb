@@ -3,30 +3,17 @@
 
 <h2>Quotes</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Quote title</th>
-      <th>Quote content</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<div class="flex-container-quotes">
     <% @quotes.each do |quote| %>
-      <tr>
-        <td><%= quote.quote_title %></td>
-        <td><%= quote.quote_content %></td>
-        <td><%= quote.user %></td>
-        <td><%= link_to 'Show', quote %></td>
-        <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <ul class = "flex-item-quote-content">"<%= quote.quote_content %>"
+      <br>
+      <li style = "float: right"><%= quote.quote_author %><li>
+      </ul>
+  </div>
+       
     <% end %>
-  </tbody>
-</table>
-
-<br>
+  
+  
 
 <%= link_to 'New Quote', new_quote_path %>
