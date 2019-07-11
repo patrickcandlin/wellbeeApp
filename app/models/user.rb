@@ -35,5 +35,6 @@ class User < ApplicationRecord
     end
     #7
     
+    
 
 end

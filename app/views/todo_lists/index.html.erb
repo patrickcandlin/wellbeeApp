@@ -21,9 +21,9 @@
         <td><%= todo_list.task_content %></td>
         <td><%= todo_list.due_date %></td>
         <td><%= todo_list.user %></td>
-        <td><%= link_to 'Show', todo_list %></td>
-        <td><%= link_to 'Edit', edit_todo_list_path(todo_list) %></td>
-        <td><%= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user_todo_list_path(params[:user_id], todo_list) %></td>
+        <td><%= link_to 'Edit', edit_user_todo_list_path(params[:user_id], todo_list) %></td>
+        <td><%= link_to 'Destroy', user_todo_list_path(params[:user_id], todo_list), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
