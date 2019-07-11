@@ -7,7 +7,7 @@
 <ul class="navigation">
   <li><%= link_to 'Create a Task', new_user_todo_list_path(@user) %></li>
   <li><%= link_to 'Express Gratitude', new_user_gratitude_journal_path(@user) %></li>
-  <li><%= link_to 'Food Recipe' %></li>
+  <li><%= link_to 'Healthy Recipes' %></li>
   <li><%= link_to 'Exercise' %></li>
   <li><%= link_to 'Inspirational Quotes'%></li>
   <li><%= link_to 'Edit', edit_user_path(@user) %></li>
@@ -16,7 +16,7 @@
 
 <ul class="flex-container">
     <% @user.gratitude_journals.each do |gratitude_journal| %>
-    <li class="flex-item-gratitude"><%= gratitude_journal.title %></li>
+    <li class="flex-item-gratitude"><%= "#{gratitude_journal.title}: #{gratitude_journal.content}" %></li>
     <%end%>
 </ul>
 <ul class="flex-container">
@@ -26,18 +26,9 @@
     </li>
     <%end%>
 </ul>
-<ul class="flex-container">
-    <% @user.gratitude_journals.each do |gratitude_journal| %>
-    <li class="flex-item"><%= gratitude_journal.title %></li>
-    <%end%>
-</ul>
 
-<%# <style>
-body {
-  background-color: #EED79B;
-  background-image: url("https://img4.goodfon.com/wallpaper/nbig/5/1f/zakat-oduvanchik-priroda.jpg")
-}
-</style> %>
+
+
 
 
 

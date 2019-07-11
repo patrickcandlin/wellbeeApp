@@ -87,7 +87,8 @@ body {
 }
 
 .navigation a:hover {
-  background: darken(rgba(255, 204, 37, 0.466), 2%);
+  background: darken(rgb(251, 255, 0), 2%);
+  color: #000;
 }
 
 @media all and (max-width: 800px) {
@@ -133,14 +134,14 @@ body {
   color: rgb(0, 0, 0);
 
  }
- .flex-item {
+ .flex-item-gratitude {
   
    background: darken(rgb(251, 255, 0), 2%);
    padding: 5px;
    width: 200px;
    height: 150px;
    margin-top: 10px;
-   
+   overflow: hidden;
    line-height: 1.6;
    color: rgb(0, 0, 0);
    font-weight: bold;
@@ -148,3 +149,17 @@ body {
    text-align: left;
  }
   
+ .flex-item-todo {
+  
+  background: darken(rgba(255, 254, 254, 0.801), 2%);
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  
+  line-height: 1.6;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+}
