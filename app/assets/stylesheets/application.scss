@@ -89,6 +89,7 @@ body {
 .navigation a:hover {
   background: darken(rgb(251, 255, 0), 2%);
   color: #000;
+  border-radius: 1em;
 }
 
 @media all and (max-width: 800px) {
@@ -138,8 +139,8 @@ body {
   
    background: darken(rgb(251, 255, 0), 2%);
    padding: 5px;
-   width: 200px;
-   height: 150px;
+   width: 220px;
+   height: 200px;
    margin-top: 10px;
    overflow: hidden;
    line-height: 1.6;
@@ -147,6 +148,7 @@ body {
    font-weight: bold;
    font-size: 1em;
    text-align: left;
+   border-radius: 1em;
  }
   
  .flex-item-todo {
@@ -162,4 +164,5 @@ body {
   font-weight: bold;
   font-size: 1em;
   text-align: left;
+  border-radius: 1em;
 }
