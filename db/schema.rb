@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 2019_07_10_155703) do
   end
 
   create_table "quotes", force: :cascade do |t|
-    t.string "quote_title"
     t.string "quote_content"
+    t.string "quote_author"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
