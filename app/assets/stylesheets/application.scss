@@ -3,11 +3,13 @@
 
 body {
     background-image: url("https://img4.goodfon.com/wallpaper/nbig/5/1f/zakat-oduvanchik-priroda.jpg");
+    // background-image: url("https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80");
+    // background-image: url("https://image.freepik.com/free-vector/orange-abstract-hexagonal-honey-comb-background_1164-1261.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
     min-height: 100vh;
-    overflow-y: auto; 
-   }
+    overflow-y: auto;
+  }
 
    h1 {
       font-family: 'Merienda One', cursive;
@@ -126,10 +128,13 @@ body {
    flex-flow: row wrap;
    justify-content: space-around;
  }
- 
+ a {
+  color: #fff;
+
+ }
  .flex-item {
   
-   background: darken(rgba(255, 204, 37, 0.466), 2%);
+   background: darken(rgba(255, 204, 37, 0.692), 2%);
    padding: 5px;
    width: 200px;
    height: 150px;

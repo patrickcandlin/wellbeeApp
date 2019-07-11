@@ -17,7 +17,9 @@
 <ul class="flex-container">
   <% @user.todo_lists.each do |todo_list| %>
 
-  <li class="flex-item"><%=link_to todo_list.task_name, user_todo_list_path(@user, todo_list)%></li>
+  <li class="flex-item">Task:<%=link_to todo_list.task_name, user_todo_list_path(@user, todo_list)%>
+  Due date:<%= todo_list.due_date %> 
+  </li>
 
   <%end%>
 </ul>
