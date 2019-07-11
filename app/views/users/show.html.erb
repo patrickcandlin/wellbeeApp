@@ -7,7 +7,7 @@
 <ul class="navigation">
   <li><%= link_to 'Create a Task', new_user_todo_list_path(@user) %></li>
   <li><%= link_to 'Express Gratitude', new_user_gratitude_journal_path(@user) %></li>
-  <li><%= link_to 'Food Repipe' %></li>
+  <li><%= link_to 'Food Recipe', user_recipes_path(@user) %></li>
   <li><%= link_to 'Exersice' %></li>
   <li><%= link_to 'Inspirational Quotes'%></li>
   <li><%= link_to 'Edit', edit_user_path(@user) %></li>
