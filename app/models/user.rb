@@ -9,5 +9,12 @@ class User < ApplicationRecord
         "#{self.first_name} #{self.last_name}"
     end
 
+    def full_name_with_email
+        "#{self.first_name} #{self.last_name} email: #{self.last_name}"
+    end
+
+    def oldest_user
+        
+    end
     
 end
