@@ -15,7 +15,7 @@
 
 <ul class="flex-container">
     <% @user.gratitude_journals.reverse.each do |gratitude_journal| %>
-    <li class="flex-item-gratitude"><%= "#{gratitude_journal.title}: #{gratitude_journal.content}" %></li>
+    <li class="flex-item-gratitude"><%= link_to gratitude_journal.title, user_gratitude_journal_path(@user, gratitude_journal) %><%=": #{gratitude_journal.content}" %></li>
     <%end%>
 </ul>
 <ul class="flex-container">
