@@ -1,25 +1,24 @@
 # README
-Hello
+WellBee!🐝
+To visit this project go to https://damp-crag-31798.herokuapp.com/users
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+WellBee makes it easy to improve a user's well being. Users can track their tasks, express gratitude, share healthy recipes and favorite quotes. Signup is simple and easy.
 
-Things you may want to cover:
 
-* Ruby version
+Getting Started
+To get this running locally:
+- Fork this repo
+- Clone it in the desired folder and run 'bundle install' to install all necessary gems
+- To get the database setup run 'rails db: migrate'
+- To run the app locally type 'rails s" and go to your browser at the port mentioned in the command line.
 
-* System dependencies
+Running the tests
+- To run a test to ensure everything is working run 'rspec' in your command line
 
-* Configuration
 
-* Database creation
+Acknowledgments
+A big thanks to CSS Trick for giving such clear explanations regrade design and flexbox.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Created by:
+Patrick Candlin
+Nelly Khmeleva
