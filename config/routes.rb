@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'analytics/index'
+  get 'analytics/show'
   resources :quotes
   resources :exercises
   resources :recipes
