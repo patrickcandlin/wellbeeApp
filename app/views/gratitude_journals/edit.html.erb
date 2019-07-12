@@ -3,5 +3,5 @@
 
 <%= render 'form', gratitude_journal: @gratitude_journal %>
 
-<%= link_to 'Show', @gratitude_journal %> |
-<%= link_to 'Back', gratitude_journals_path %>
+
+<%= link_to 'Back', user_path(params[:user_id]) %>

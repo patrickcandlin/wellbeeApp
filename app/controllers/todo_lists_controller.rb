@@ -59,7 +59,7 @@ class TodoListsController < ApplicationController
     user_id = @todo_list.user_id
     @todo_list.destroy
     respond_to do |format|
-      format.html { redirect_to user_todo_lists_path(user_id), notice: 'Todo list was successfully destroyed.' }
+      format.html { redirect_to user_path(user_id), notice: 'Todo list was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

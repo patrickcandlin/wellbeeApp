@@ -55,9 +55,10 @@ class GratitudeJournalsController < ApplicationController
   # DELETE /gratitude_journals/1
   # DELETE /gratitude_journals/1.json
   def destroy
+    user_id = @gratitude_journal.user_id
     @gratitude_journal.destroy
     respond_to do |format|
-      format.html { redirect_to gratitude_journals_url, notice: 'Gratitude journal was successfully destroyed.' }
+      format.html { redirect_to user_path(user_id), notice: 'Gratitude journal was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -77,3 +78,4 @@ class GratitudeJournalsController < ApplicationController
       params.require(:gratitude_journal).permit(:title, :content, :user_id)
     end
 end
+ 
