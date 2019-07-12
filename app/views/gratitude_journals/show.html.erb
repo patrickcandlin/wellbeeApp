@@ -1,10 +1,7 @@
 <h1>WellBee 🐝</h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @gratitude_journal.title %>
-</p>
+
 
 <p>
   <strong>Content:</strong>
@@ -19,3 +16,23 @@
 <%= link_to 'Edit', edit_gratitude_journal_path(@gratitude_journal) %> |
 <%= link_to 'Back', user_path(params[:user_id]) %>
 
+<ul class="flex-container">
+    <li class="flex-item-todo-show">
+        <p>
+          <strong>Task name:</strong>
+          <%= @todo_list.task_name %>
+        </p>
+
+        <p>
+          <strong>Task content:</strong>
+          <%= @todo_list.task_content %>
+        </p>
+
+        <p>
+          <strong>Due date:</strong>
+          <%= @todo_list.due_date %>
+        </p>
+
+        <%= button_to 'delete', user_todo_list_url, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+</ul>
