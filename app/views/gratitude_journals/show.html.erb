@@ -1,38 +1,27 @@
 <h1>WellBee 🐝</h1>
 <p id="notice"><%= notice %></p>
 
-
-
-<p>
-  <strong>Content:</strong>
-  <%= @gratitude_journal.content %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @gratitude_journal.user %>
-</p>
-
-<%= link_to 'Edit', edit_gratitude_journal_path(@gratitude_journal) %> |
-<%= link_to 'Back', user_path(params[:user_id]) %>
+<ul class="navigation">
+  <li><%= link_to 'Edit', edit_gratitude_journal_path(params[:user_id], params[:id]) %></li>
+  <li><%= link_to 'Back', user_path(params[:user_id]) %></li>
+</ul>
 
 <ul class="flex-container">
     <li class="flex-item-todo-show">
         <p>
-          <strong>Task name:</strong>
-          <%= @todo_list.task_name %>
+          <strong>Title:</strong>
+          <%= @gratitude_journal.title %>
+        </p>
+        <p>
+          <strong>Content:</strong>
+          <%= @gratitude_journal.content %>
         </p>
 
         <p>
-          <strong>Task content:</strong>
-          <%= @todo_list.task_content %>
+          <strong>User:</strong>
+          <%= @gratitude_journal.user.first_name %>
         </p>
 
-        <p>
-          <strong>Due date:</strong>
-          <%= @todo_list.due_date %>
-        </p>
-
-        <%= button_to 'delete', user_todo_list_url, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= button_to 'delete', user_gratitude_journal_url, method: :delete, data: { confirm: 'Are you sure?' } %>
     </li>
 </ul>
