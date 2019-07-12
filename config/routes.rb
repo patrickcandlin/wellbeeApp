@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'analytics/index'
-  get 'analytics/show'
+  resources :analytics
   resources :quotes
   resources :exercises
   resources :recipes
@@ -12,6 +11,7 @@ Rails.application.routes.draw do
     resources :recipes
     resources :exercises
     resources :quotes
+    resources :analytics
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
