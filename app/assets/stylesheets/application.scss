@@ -26,11 +26,9 @@ body {
 
    h2 {
       font-family: 'Merienda One', cursive; 
-      color: rgb(175, 93, 0); 
+      // color: rgb(255, 217, 0); 
       margin: 0 35px 0 35px;
-      text-align: center;
-      font-size: 70px;
-      padding: 50px
+      font-size: 25px;
    }
    form {
       // padding: 10px;
@@ -78,8 +76,9 @@ body {
     }
 
 .navigation {
+  font-family: 'Merienda One', cursive;
   list-style: none;
-  margin: 35px; 
+  margin: -47px 35px 0px 35px;
   
   background: bg-transparent;
   
@@ -97,11 +96,12 @@ body {
   text-decoration: none;
   display: block;
   padding: 1em;
-  color: white;
+  color: rgb(3, 3, 3);
+  font-size: 20px;
 }
 
 .navigation a:hover {
-  background: darken(rgba(255, 230, 0, 0.774), 2%);
+  background: darken(rgba(231, 132, 19, 0.774), 2%);
   color: #000;
   border-radius: 1em;
 }
@@ -153,9 +153,9 @@ body {
   
    background: darken(rgba(255, 217, 0, 0.733), 2%);
    padding: 5px;
-   width: 220px;
-   height: 200px;
-   margin-top: 10px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
    overflow: hidden;
    line-height: 1.6;
    color: rgb(0, 0, 0);
@@ -167,7 +167,7 @@ body {
   
  .flex-item-todo {
   
-  background: darken(rgba(255, 254, 254, 0.801), 2%);
+  background: darken(rgba(221, 115, 73, 0.678), 2%);
   padding: 5px;
   width: 200px;
   height: 150px;
@@ -197,52 +197,23 @@ body {
   text-align: left;
   border-radius: 1em;
 }
-.flex-container-quotes {
-  padding: 4;
-  margin: 4;
-  list-style: none;
-   
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-   
-  flex-flow: row wrap;
-  align-items: center;
 
-}
-
-.flex-item-quote-content {
-  background: darken(rgba(255, 230, 0, 0.774), 2%);
+ .flex-container-rec {
+  background: darken(rgba(248, 141, 18, 0.774), 2%);
    padding: 5px;
    width: auto;
    max-width: 50%;
    height: auto;
-   margin-top: 30px;
+   margin: auto;
    overflow: hidden;
    line-height: 3;
    color: rgb(0, 0, 0);
    font-weight: bold;
-   font-size: 1em;
-   text-align: left;
+   font-size: 1.3em;
+   text-align: center;
    border-radius: 1em;
    flex-wrap: nowrap;
-   
- }
-
- .flex-container-rec {
-  padding: 4;
-   margin: 4;
-   list-style: none;
-   
-   display: -webkit-box;
-   display: -moz-box;
-   display: -ms-flexbox;
-   display: -webkit-flex;
-   display: flex;
-   
-   flex-flow: row wrap;
+  
 }
 
 .flex-item-rec {
@@ -251,7 +222,7 @@ body {
    width: auto;
    max-width: 50%;
    height: auto;
-   margin-top: 30px;
+   margin: auto;
    overflow: hidden;
    line-height: 3;
    color: rgb(0, 0, 0);
@@ -260,7 +231,26 @@ body {
    text-align: left;
    border-radius: 1em;
    flex-wrap: nowrap;
-   
- }
+   display: -webkit-box;
+   padding: 4;
+   margin: 4;
+   list-style: none;
+   }
 
- 
+
+
+.quotes{
+  font-family: 'Merienda One', cursive;
+  font-size: 20px;
+  color:rgba(59, 18, 2, 0.678);
+}
+
+.author{
+  font-family: 'Merienda One', cursive;
+  font-size: 20px;
+  color: rgba(231, 132, 19, 0.774);
+}
+
+mark{
+  background-color: darken(rgba(231, 132, 19, 0.774), 2%);
+}
